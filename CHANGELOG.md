@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/arjunbhatt670/devity/compare/v1.0.0...v1.1.0) (2024-09-18)
+
+
+### Features
+
+* **setup:** audit fix ([d114145](https://github.com/arjunbhatt670/devity/commit/d1141455fa5acafc4f62b34b4a3e82076d7a7351))
+
 # 1.0.0 (2024-09-18)
 
 
