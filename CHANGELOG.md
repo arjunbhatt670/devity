@@ -1,3 +1,10 @@
+# 1.0.0 (2024-09-18)
+
+
+### Features
+
+* **setup:** base setup ([645646f](https://github.com/arjunbhatt670/devity/commit/645646f8277f87b03618b84d737bcc806f57de6a))
+
 ## [3.55.3](https://github.com/ixartz/Next-js-Boilerplate/compare/v3.55.2...v3.55.3) (2024-08-21)
 
 
