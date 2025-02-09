@@ -45,6 +45,14 @@ export default async function Layout(props: {
             </li>
             <li>
               <Link
+                href="/guestbook/"
+                className="border-none text-gray-700 hover:text-gray-900"
+              >
+                {t('guestbook_link')}
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/portfolio/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >

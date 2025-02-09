@@ -3,6 +3,7 @@
     "home_link": "Home",
     "about_link": "About",
     "counter_link": "Counter",
+    "guestbook_link": "Guestbook",
     "portfolio_link": "Portfolio",
     "sign_in_link": "Sign in",
     "sign_up_link": "Sign up"
@@ -26,6 +27,18 @@
     "presentation": "The counter is stored in the database and incremented by the value you provide.",
     "label_increment": "Increment by",
     "button_increment": "Increment"
+  },
+  "Guestbook": {
+    "meta_title": "Guestbook",
+    "meta_description": "An example of CRUD operation",
+    "database_powered_by": "Database powered by",
+    "loading_guestbook": "Loading guestbook...",
+    "error_reporting_powered_by": "Error reporting powered by"
+  },
+  "GuestbookForm": {
+    "username": "Username",
+    "body": "Body",
+    "save": "Save"
   },
   "CurrentCount": {
     "count": "Count: {count}"
