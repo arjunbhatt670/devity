@@ -7,7 +7,7 @@ test.describe('Visual testing', () => {
       await page.goto('/');
 
       await expect(
-        page.getByRole('heading', { name: 'Boilerplate Code for Your Next.js Project with Tailwind CSS' }),
+        page.getByText('Welcome to Home page!'),
       ).toBeVisible();
 
       await percySnapshot(page, 'Homepage');
