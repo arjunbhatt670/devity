@@ -7,9 +7,9 @@ import { EditableGuestbookEntry } from './EditableGuestbookEntry';
 
 const GuestbookList = async () => {
   // slow load guestbook
-  await new Promise<void>(res => setTimeout(() => {
-    res();
-  }, 5000));
+  // await new Promise<void>(res => setTimeout(() => {
+  //   res();
+  // }, 5000));
 
   const guestbook = await db
     .select()
