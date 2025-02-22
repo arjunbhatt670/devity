@@ -26,10 +26,8 @@ export const BaseTemplate = (props: {
               </ul>
             </nav>
 
-            <nav>
-              <ul className="flex flex-wrap gap-x-5 text-xl">
-                {props.rightNav}
-              </ul>
+            <nav className="flex flex-wrap gap-x-5 text-xl">
+              {props.rightNav}
             </nav>
           </div>
         </header>
