@@ -85,3 +85,22 @@ export const DELETE = async (request: Request) => {
     return NextResponse.json({}, { status: 500 });
   }
 };
+
+export const GET = async () => {
+  try {
+    await new Promise<void>(res => setTimeout(() => res(), 3000));
+
+    const guestbook = await db
+      .select()
+      .from(guestbookSchema)
+      .orderBy(guestbookSchema.createdAt);
+
+    logger.info('Get all guestbook entries');
+
+    return NextResponse.json(guestbook);
+  } catch (error) {
+    logger.error(error, 'An error occurred while listing guestbook');
+
+    return NextResponse.json({}, { status: 500 });
+  }
+};
