@@ -7,11 +7,9 @@ export const metadata: Metadata = {
 };
 
 const DogFacts = async () => {
-  const data = await fetch('http://dog-api.kinduff.com/api/facts?number=2', {
-    next: {
-      revalidate: 300,
-    },
-  }).then(resp => resp.json()) as { facts: string[]; success: boolean };
+  const response = await fetch('http://dog-api.kinduff.com/api/facts?number=2');
+
+  const data = await response.json() as { facts: string[]; success: boolean };
 
   logger.info('Dog facts fetched');
 
@@ -28,5 +26,7 @@ const DogFacts = async () => {
     </>
   );
 };
+
+export const revalidate = 300;
 
 export default DogFacts;
