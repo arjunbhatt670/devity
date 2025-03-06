@@ -4,6 +4,10 @@ import { counterSchema } from '@/models/Schema';
 import { eq } from 'drizzle-orm';
 import { headers } from 'next/headers';
 
+// await new Promise<void>(res => setTimeout(() => {
+//   res();
+// }, 500));
+
 export const CurrentCount = async () => {
   const id = Number((await headers()).get('id')) ?? 0;
   const result = await db.query.counterSchema.findMany({

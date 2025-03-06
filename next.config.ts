@@ -13,5 +13,8 @@ export default bundleAnalyzer(
     },
     poweredByHeader: false,
     reactStrictMode: true,
+    experimental: {
+      ppr: 'incremental',
+    },
   },
 );
