@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const DogFacts = async () => {
-  const response = await fetch('http://dog-api.kinduff.com/api/facts?number=2');
+  const response = await fetch('https://dogapi.dog/api/facts?number=2');
 
   const data = await response.json() as { facts: string[]; success: boolean };
 

@@ -13,6 +13,5 @@ export default bundleAnalyzer(
     },
     poweredByHeader: false,
     reactStrictMode: true,
-    serverExternalPackages: ['@electric-sql/pglite'],
   },
 );

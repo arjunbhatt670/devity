@@ -88,8 +88,6 @@ export const DELETE = async (request: Request) => {
 
 export const GET = async () => {
   try {
-    await new Promise<void>(res => setTimeout(() => res(), 3000));
-
     const guestbook = await db
       .select()
       .from(guestbookSchema)
