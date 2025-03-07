@@ -18,7 +18,8 @@ const GuestbookList = async () => {
   const guestbook = await db
     .select()
     .from(guestbookSchema)
-    .orderBy(guestbookSchema.createdAt);
+    .orderBy(guestbookSchema.createdAt)
+    .then(data => new Promise<typeof data>(res => setTimeout(() => res(data), 3000)));
 
   logger.info('Get all guestbook entries');
 

@@ -3,7 +3,9 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const tabs = [{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }, { name: 'Counter', path: '/counter' }, { name: 'Guestbook', path: '/guestbook' }, { name: 'Guestbook Client', path: '/guestbook-client' }, { name: 'Portfolio', path: '/portfolio' }, { name: 'Dog Facts', path: '/dog-facts' }];
+const tabs = [{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }, { name: 'Counter', path: '/counter' }, { name: 'Guestbook', path: '/guestbook' },
+  // { name: 'Guestbook Client', path: '/guestbook-client' },
+  { name: 'Portfolio', path: '/portfolio' }, { name: 'Dog Facts', path: '/dog-facts' }];
 
 export function NavigationTabs() {
   const pathname = usePathname();
