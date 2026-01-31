@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -8,7 +10,7 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata(props: Props) {
+export async function generateMetadata(props: Props): Promise<Metadata> {
   const { slug } = await props.params;
 
   return {
@@ -27,5 +29,3 @@ export default async function PortfolioDetail(props: Props) {
     </>
   );
 };
-
-export const dynamicParams = false;

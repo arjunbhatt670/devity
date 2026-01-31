@@ -2,6 +2,7 @@ import { db } from '@/libs/DB';
 import { logger } from '@/libs/Logger';
 import { guestbookSchema } from '@/models/Schema';
 
+import { connection } from 'next/server';
 import { DeleteGuestbookEntry } from './DeleteGuestbookEntry';
 import { EditableGuestbookEntry } from './EditableGuestbookEntry';
 
@@ -15,11 +16,12 @@ import { EditableGuestbookEntry } from './EditableGuestbookEntry';
 // });
 
 const GuestbookList = async () => {
+  await connection();
+
   const guestbook = await db
     .select()
     .from(guestbookSchema)
-    .orderBy(guestbookSchema.createdAt)
-    .then(data => new Promise<typeof data>(res => setTimeout(() => res(data), 3000)));
+    .orderBy(guestbookSchema.createdAt);
 
   logger.info('Get all guestbook entries');
 

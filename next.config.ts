@@ -8,10 +8,8 @@ const bundleAnalyzer = withBundleAnalyzer({
 /** @type {import('next').NextConfig} */
 export default bundleAnalyzer(
   {
-    eslint: {
-      dirs: ['.'],
-    },
     poweredByHeader: false,
     reactStrictMode: true,
+    cacheComponents: true,
   },
 );

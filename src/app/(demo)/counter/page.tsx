@@ -1,8 +1,9 @@
+import type { Metadata } from 'next';
 import { CounterForm } from '@/components/CounterForm';
 import { CurrentCount } from '@/components/CurrentCount';
 import { Suspense } from 'react';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Counter',
   description: 'An example of DB operation',
 };

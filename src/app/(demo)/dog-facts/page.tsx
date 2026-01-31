@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { logger } from '@/libs/Logger';
+import { cacheLife } from 'next/cache';
 
 export const metadata: Metadata = {
   title: 'Dog Facts',
@@ -7,9 +8,12 @@ export const metadata: Metadata = {
 };
 
 const DogFacts = async () => {
+  'use cache';
+  cacheLife({ revalidate: 300 });
+
   const response = await fetch('https://dogapi.dog/api/facts?number=2');
 
-  const data = await response.json() as { facts: string[]; success: boolean };
+  const data: { facts: string[]; success: boolean } = await response.json();
 
   logger.info('Dog facts fetched');
 
@@ -26,7 +30,5 @@ const DogFacts = async () => {
     </>
   );
 };
-
-export const revalidate = 300;
 
 export default DogFacts;
