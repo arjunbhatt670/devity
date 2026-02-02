@@ -2,7 +2,7 @@ import { DeleteGuestbookEntry } from '@/components/DeleteGuestbookEntry';
 import { EditableGuestbookEntry } from '@/components/EditableGuestbookEntry';
 import { use } from 'react';
 
-const GuestbookList = ({ guestbookPromise }: { guestbookPromise: Promise<{ id: number; username: string; body: string }[]> }) => {
+const GuestbookList = ({ guestbookPromise }: { guestbookPromise: Promise<{ id: number; username: string; body: string; htmlContent: string }[]> }) => {
   const guestbook = use(guestbookPromise);
 
   return (
@@ -15,6 +15,7 @@ const GuestbookList = ({ guestbookPromise }: { guestbookPromise: Promise<{ id: n
             id={elt.id}
             username={elt.username}
             body={elt.body}
+            htmlContent={elt.htmlContent}
           />
         </div>
       ))}

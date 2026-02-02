@@ -23,6 +23,7 @@ export default antfu({
   ignores: [
     'migrations/**/*',
     'next-env.d.ts',
+    'public/scripts/',
   ],
 }, jsxA11y.flatConfigs.recommended, {
   plugins: {
@@ -31,6 +32,9 @@ export default antfu({
   rules: {
     ...nextPlugin.configs.recommended.rules,
     ...nextPlugin.configs['core-web-vitals'].rules,
+    'no-eval': 'off',
+    'no-console': 'off',
+    'react-dom/no-dangerously-set-innerhtml': 'off',
   },
 }, {
   files: [

@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { connection } from 'next/server';
+import { Suspense } from 'react';
 import '@/styles/global.css';
 
 export const metadata: Metadata = {
@@ -26,9 +28,10 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout(props: {
+async function RootLayout(props: {
   children: React.ReactNode;
 }) {
+  await connection();
   return (
     <html lang="en">
       <body>
@@ -37,3 +40,11 @@ export default function RootLayout(props: {
     </html>
   );
 }
+
+export default function RootLayoutWithSuspense({ children }: { children: React.ReactNode }) {
+  return (
+    <Suspense fallback={<p>Loading Root Layout...</p>}>
+      <RootLayout children={children} />
+    </Suspense>
+  );
+};

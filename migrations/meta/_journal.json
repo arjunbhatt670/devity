@@ -15,6 +15,13 @@
       "when": 1725916508374,
       "tag": "0001_init-db",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1769960863385,
+      "tag": "0002_low_blue_shield",
+      "breakpoints": true
     }
   ]
 }

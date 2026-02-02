@@ -11,7 +11,7 @@ export const BaseTemplate = (props: {
             <h1 className="text-3xl font-bold text-gray-900">
               Next JS App
             </h1>
-            <h2 className="text-xl">SSR? ISR? CSR? I just wanted my div to render, man!</h2>
+            <h2 className="text-xl">Built with ❤️, broken with &lt;script&gt;</h2>
           </div>
 
           <div className="flex justify-between">

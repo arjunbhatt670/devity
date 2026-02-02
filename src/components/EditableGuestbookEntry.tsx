@@ -8,6 +8,7 @@ const EditableGuestbookEntry = (props: {
   id: number;
   username: string;
   body: string;
+  htmlContent: string;
 }) => {
   const [isEditing, setIsEditing] = useState(false);
 
@@ -45,6 +46,7 @@ const EditableGuestbookEntry = (props: {
                 defaultValues={{
                   username: props.username,
                   body: props.body,
+                  htmlContent: props.htmlContent,
                 }}
                 onValid={async (data) => {
                   await fetch(`/api/guestbook`, {

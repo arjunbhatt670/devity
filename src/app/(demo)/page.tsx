@@ -1,8 +1,10 @@
-export const metadata = {
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
   title: 'Home',
-  description: 'Home description',
+  description: 'Welcome to Home page!',
 };
 
 export default async function Index() {
   return <p>Welcome to Home page!</p>;
-};
+}

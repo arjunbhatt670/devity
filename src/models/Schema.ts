@@ -14,6 +14,7 @@ export const guestbookSchema = pgTable('guestbook', {
   id: serial('id').primaryKey(),
   username: text('username').notNull(),
   body: text('body').notNull(),
+  htmlContent: text('htmlContent').notNull(),
   updatedAt: timestamp('updated_at', { mode: 'date' })
     .defaultNow()
     .$onUpdate(() => new Date())

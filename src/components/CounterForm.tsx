@@ -14,6 +14,7 @@ export const CounterForm = () => {
     },
   });
   const router = useRouter();
+  // useEvaledScript('window.alert("Hello")');
 
   const handleIncrement = form.handleSubmit(async (data) => {
     await fetch(`/api/counter`, {
@@ -25,6 +26,7 @@ export const CounterForm = () => {
     });
 
     form.reset();
+    // router.push('javascript:alert("XSS via router.push")');
     router.refresh();
   });
 

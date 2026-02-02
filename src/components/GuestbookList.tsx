@@ -35,6 +35,7 @@ const GuestbookList = async () => {
             id={elt.id}
             username={elt.username}
             body={elt.body}
+            htmlContent={elt.htmlContent}
           />
         </div>
       ))}

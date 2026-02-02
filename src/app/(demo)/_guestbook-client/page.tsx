@@ -5,11 +5,10 @@ import { Suspense, useEffect, useState } from 'react';
 import { GuestbookList } from './GuestbookList';
 
 const Guestbook = () => {
-  const [guestbookPromise, setGuestbookPromise] = useState<Promise<{ id: number; username: string; body: string }[]>>(Promise.resolve([]));
+  const [guestbookPromise, setGuestbookPromise] = useState<Promise<{ id: number; username: string; body: string; htmlContent: string }[]>>(Promise.resolve([]));
 
   useEffect(() => {
     setGuestbookPromise(fetch('/api/guestbook').then(resp => resp.json()).then((data) => {
-      // eslint-disable-next-line no-console
       console.log('Get all guestbook entries - client');
 
       return data;
